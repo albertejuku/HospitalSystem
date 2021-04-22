@@ -1,0 +1,6 @@
+@charset "UTF-8";
+.doctor{
+    padding: 20px;
+    margin: 20px 50px;
+    box-shadow: 1px 2px 12px rgb(195, 195, 255);
+}

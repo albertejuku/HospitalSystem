@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+    <link rel="stylesheet" th:href="@{items.css}">
+</head>
+<body>
+    <div id="root">
+        <div class="top">
+            <div class="logo">
+                HospitalSystem
+            </div>
+            <div class="navigation">
+                <li><a href="/">home</a></li>
+                <li><a href="/admin">admin</a></li>
+                <li><a href="#">info</a></li>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="side-nav">
+                <div class="cap">
+                    View available items
+                </div>
+                <ul class="list">
+                    <li><a href="/doc_list">doctors</a></li>
+                    <li><a href="/patients">patients</a></li>
+                    <li><a href="/appointments">appointments</a></li>
+                </ul>
+                <div class="cap">
+                    Create new items
+                </div>
+                <ul class="create">
+                    <li><a href="/createDoctor">add doctor</a></li>
+                    <li><a href="/createPatient">add patient</a></li>
+                    <li><a href="/saveApps">add appointment</a></li>
+                    <li><a href="/createDepartment">add department</a></li>
+                </ul>
+            </div>
+
+            <div class="items">
+                <div class="title">
+                    Doctors
+                </div>
+                <div class="list">
+                    <div class="card">
+                        <div class="names">
+                            Dr. 
+                            <span th:text="${doctor.first_name}"></span>
+                            <span th:text="${doctor.last_name}"></span>
+                        </div>
+                        <div class="roles" th:switch="${roles}">
+                            <div th:case="*">
+                            	<div th:each="role: ${roles}">
+                            		<div th:text="${role.role_details}" ></div>
+                            	</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="addrole">
+                    	<a th:href="@{/doctor/createRole/{id}(id = ${doctor.emp_id})}"> add role </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>   
+</body>
+</html>

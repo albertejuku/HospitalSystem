@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Josefin Sans';
+    font-weight: 600;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    height: 10vh;
+    border-bottom: 1px solid maroon;
+}
+.logo{
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #357;
+}
+.navigation{
+    margin-left: auto;
+    display: flex;
+}
+.navigation li{
+    margin: 0 10px;
+}
+.navigation li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgb(117, 117, 117);
+}
+.navigation li a:hover{
+    color: black;
+}
+
+
+/* style rules for content section */
+.content{
+    display: flex;
+    z-index: 1;
+}
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    border-right: 1px solid maroon;
+    height: 90vh;
+    position: sticky;
+    top: 10vh;
+    width: 20%;
+}
+.side-nav *{
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    font-size: .9rem;
+    line-height: 1.6pc;
+    text-transform: capitalize;
+}
+.side-nav .cap{
+    color: rgb(255, 123, 0);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+.list, .create{
+    margin: 10px 20px 30px 20px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.welcome-page{
+    padding: 50px;
+    height: 90vh;
+    display: grid;
+    place-content: center;
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("frank.jpg");
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.slogan{
+    margin-top: 20px;
+    color: rgb(255, 136, 0);
+    text-transform: capiTaLize;
+}
+
+.hosp-details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.services{
+    padding: 20px;
+}
+.services .caption{
+    color: rgb(52, 2, 65);
+    border-left: 10px solid orangered;
+    padding-left: 10px;
+    line-height: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.service-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.service-list .service{
+    width: 22%;
+    margin: 10px;
+    height: 150px;
+    display: grid;
+    place-content: center;
+    box-shadow: 1px 1px 12px #ddd;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 20px;
+}
+
+.other-comments{
+    padding: 30px 20px;
+    margin-top: 20px;
+    background-color: rgb(66, 0, 66);
+    color: white;
+    font-size: 1.2rem;
+    border-left: 10px solid orangered;
+}

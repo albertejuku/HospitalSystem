@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.add_item {
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 2px 20px #ddd;
+    width: 70%;
+    margin: auto;
+}
+.add_item  .cap{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+.add_item form{
+    display: flex;
+}
+.add_item  .personal_details,
+.add_item  .contact_details{
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    width: 40%;
+    margin: 0 auto;
+}
+.add_item  input,
+.add_item  input{
+    padding: 6px;
+    margin: 5px 0 10px 0;
+    font-size: 1rem;
+}
+.add_item  input[type=submit]{
+    padding: 8px 20px;
+    border: none;
+    background-color: rgb(29, 78, 0);
+    color: white;
+    text-transform: uppercase;
+}
+textarea{
+	padding: 5px;
+	font-size: 1rem;
+}
+.add_item  input[type=submit]:hover{
+    background-color: rgb(0, 6, 31);
+    cursor: pointer;
+}
+.add_item  .caption0{
+    font-weight: bolder;
+    margin: 10px 0;
+    text-align: center;
+}
+.add_item .list-1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}

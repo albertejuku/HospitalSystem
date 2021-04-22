@@ -1,0 +1,68 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.body .caption{
+    background-color: rgb(29, 78, 0);
+    padding: 15px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.body .actual_content{
+    display: flex;
+}
+.actual_content .monitor{
+    width: 50%;
+}
+.actual_content .create{
+    width: 50%;
+}
+.create .add_department, .add_doctor{
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 2px 20px #ddd;
+    border-left: 10px solid rgb(124, 0, 128);
+    border-right: 10px solid rgb(124, 0, 128);
+
+}
+.add_department .cap, .add_doctor .cap{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+.add_department .name, 
+.add_doctor .personal_details,
+.add_doctor .contact_details{
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+}
+.add_department .name input,
+.add_doctor .personal_details input,
+.add_doctor .contact_details input{
+    padding: 6px;
+    margin: 5px 0 10px 0;
+}
+.add_department input[type="submit"],
+.add_doctor input[type=submit]{
+    padding: 8px 20px;
+    border: none;
+    background-color: rgb(29, 78, 0);
+    color: white;
+    text-transform: uppercase;
+}
+.add_department input[type=submit]:hover,
+.add_doctor input[type=submit]:hover{
+    background-color: rgb(0, 6, 31);
+    cursor: pointer;
+}
+.add_doctor .caption0{
+    font-weight: bolder;
+    margin: 10px 0;
+    text-align: center;
+}

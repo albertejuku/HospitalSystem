@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="items.css">
+</head>
+<body>
+    <div id="root">
+        <div class="top">
+            <div class="logo">
+                HospitalSystem
+            </div>
+            <div class="navigation">
+                <li><a href="/">home</a></li>
+                <li><a href="/admin">admin</a></li>
+                <li><a href="#">info</a></li>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="side-nav">
+                <div class="cap">
+                    View available items
+                </div>
+                <ul class="list">
+                    <li><a href="/doc_list">doctors</a></li>
+                    <li><a href="/patients">patients</a></li>
+                    <li><a href="/appointments">appointments</a></li>
+                </ul>
+                <div class="cap">
+                    Create new items
+                </div>
+                <ul class="create">
+                    <li><a href="/createDoctor">add doctor</a></li>
+                    <li><a href="/createPatient">add patient</a></li>
+                    <li><a href="/saveApps">add appointment</a></li>
+                    <li><a href="/createDepartment">add department</a></li>
+                </ul>
+            </div>
+
+            <div class="items">
+                <div class="title">
+                    Appointments
+                </div>
+                <div class="list" th:switch="${apps}">
+                <div th:case="null">No appointment found</div>
+                <div th:case="*"></div>
+                    <div class="card" th:each="app: ${apps}">
+						<div class="doc_name">
+							DOCTOR: Dr
+							<span th:text="${app.doctor.first_name}"></span>
+							<span th:text="${app.doctor.last_name}"></span>
+						</div><p></p>
+						<div class="pat_name">
+							PATIENT: Mr
+							<span th:text="${app.patient.first_name}"></span>
+							<span th:text="${app.patient.last_name}"></span>					
+						</div><p></p>
+						<div class="app_case">
+							CASE: <span th:text="${app.patient.case_details}"></span>
+						</div><p></p>
+						<div class="start_time">
+						 		<span th:text="${app.patient.case_title}"></span>
+						</div><p></p>
+						<div class="time_created">
+						 	DATE: <span th:text="${app.time_created}"></span>
+						</div>
+						
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>   
+</body>
+</html>
